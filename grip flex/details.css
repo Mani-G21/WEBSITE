@@ -1,0 +1,110 @@
+.heading
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 5px 5px 15px #b5b3b3;
+}
+
+.box
+{
+    border: 0px;
+    /* border-radius: 15px; */
+    background-color: #fafafae1;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.24);
+}
+.option
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.product-details {
+    flex: 1;
+    padding-left: 0px;
+    max-width: 600px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+
+}
+.product-details{
+    display: inline-block;
+    color: white;
+    text-shadow: black;
+
+}
+body{
+    margin: 0px;
+}
+#imga
+{
+    max-width: 615px;
+
+    
+}
+.selection
+{
+    display: inline-block;
+    margin-top: 1px;
+    float: right;
+    margin-right: 5vh;
+}
+
+.img
+{
+    width: 100%;
+    display: block;
+}
+
+.money
+{
+   
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+}
+.device-name
+{
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+ #deviceoptions
+ {
+    background-color: rgb(237, 237, 237);
+            border: 1px solid #000000;
+             border-radius: 100px;
+            width:100%;
+            padding: 12px 0px;
+            
+ }
+
+ button.submit
+ {
+    text-align: center;
+    margin: auto;
+    border-radius: 9px;
+ }
+
+ .container{  
+    text-align: center;
+    }  
+
+    #btn
+    {
+        padding: 10px 24px;
+        border-radius: 20px;
+        color: #070000;
+        border: 2px solid #b4b7b0; 
+        background-color: #b4b7b0;
+        transition-duration: 0.4s;
+    }
+    #btn:hover
+    {
+        background-color: #ffffff; 
+        border: 2px solid #ffffff; 
+        color: rgb(0, 0, 0);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.24);
+    }
+
+    .text
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #494949;
+    }

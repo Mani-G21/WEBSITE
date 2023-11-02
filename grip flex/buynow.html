@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Dancing+Script?preview.text=GRIPFLEX">
+    <style>
+        /* CSS for the popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* CSS for the close button */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+        body {
+        background-image: url(images/dark3.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+                  
+
+            font-family: Arial, sans-serif;
+            zoom: 70%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+             display: flex;
+            /* justify-content: space-between; 
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px; */
+
+        }
+
+        .product-details {
+            flex: 1;
+
+            max-width: 300px;
+            margin-right: 0px;
+            margin-left: 20px;
+            margin-top: 20px;
+
+        }
+
+
+        .checkout-form {
+            flex: 1;
+            padding: 20px;
+            
+            color: white;
+            margin: 100px;
+            box-shadow: 5px 5px 10px green;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+            /* border: 1px solid darkgrey; */
+            border-radius: 5px;
+        }
+
+        .form-section label {
+            display: block;
+            font-weight: bold;
+        }
+        .product-details{
+            color: white;
+            text-shadow: black;
+            
+        }
+        .form-section input[type="text"],
+        .form-section input[type="email"],
+        .form-section select {
+            width: 94%;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid darkgrey; 
+            margin-left: 10px;
+            border-radius: 5px;
+            font-size: large;
+        }
+
+        .submit-button {
+            background-image: linear-gradient(to right, rgb(87, 196, 33) , rgb(43, 49, 131));
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            zoom: 150%;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+            cursor: pointer;
+        }
+       
+        .checkout-form
+        {
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 5px ;
+        }
+        h2
+        {
+            margin-left: 15px;
+        }
+        /* CSS for the "Continue Shopping" button */
+#continue-shopping-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 80vh;
+    zoom: 100%;
+}
+
+#continue-shopping-button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+.quote{
+    margin-top: 2px;
+    border: 2px solid orange;
+    background-color: rgba(128, 128, 128, 0.441);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Cormorant', serif;
+    text-decoration: solid;
+    font-style: italic;
+    
+}
+        .pdetailsinner
+        {
+            font-size: 150%;     
+            justify-content: center;       
+        }
+        .personal-details
+        {
+            margin: 5px;
+            padding: 15px;
+            
+        }
+        #imga{
+           
+           
+            zoom: 150%;
+            max-width: 200px;
+            box-shadow: 1px 5px 10px rgb(255, 255, 255);
+           
+        }
+        fieldset{
+            padding-left: 0px;
+            padding-right: 17px;
+            background-color: rgb(0, 0, 0);
+            zoom: 90%;
+           
+        }
+        .footer
+        {
+            border-top: darkgrey 1px solid;
+            background: #333;
+            display: flex;
+            color:blanchedalmond;
+            border:#333;
+            box-sizing: border-box;
+        }
+        .col1
+        {
+            margin: 25px;
+            font-size: x-large;   
+        }
+        .col2
+        {
+            font-size: x-large;
+            margin: 25px;   margin-left: 300px;
+        }
+        .col3
+        {
+            font-size: x-large;
+            margin: 25px;
+            margin-left: 300px;
+        }
+        .col4
+        {
+            font-size: x-large;
+            margin: 25px;
+            margin-left: 300px;
+        }
+        a
+        {
+            color: blanchedalmond;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageUrl = urlParams.get('image');
+    const price = urlParams.get('price');
+    const itemname = urlParams.get('product');
+    const model = urlParams.get('model');
+
+    document.getElementById('item').innerHTML = `${itemname}`;
+    document.getElementById('productPrice').innerHTML = `Total:          ${price}/-`;
+
+    // Display the selected model in the designated element
+    const selectedModelElement = document.getElementById('selectedModel');
+    if (selectedModelElement && model) {
+        selectedModelElement.innerHTML = `Selected Model: ${model}`;
+    }
+
+    if (imageUrl) {
+        const productImage = document.getElementById('imga');
+        productImage.src = imageUrl;
+    }
+});
+
+   
+       
+    </script>
+    <div class="container">
+        <fieldset>
+            <img src="images/newlogo.png" alt="" style="zoom: 50%;">
+        <div class="product-details">
+            <img id="imga" alt="Selected Product Image">
+            <div class="pdetailsinner">
+           
+            
+            <p id="item">Selected item:</p>
+            <div id="selectedModel"></div>
+            <hr style="margin-top: 450px;">
+            
+             
+            <pre><b id="productPrice" style="font-size:xx-large;"></b></pre>
+        </div>
+        </div>
+    </fieldset>
+        
+       
+        <div class="checkout-form">
+         
+            <form action="" id="contactForm">
+               
+              <fieldset>
+                <legend style="font-family: fantasy; font-size: xx-large; color: green;">CHECKOUT</legend>
+                <div class="form-section">
+                    <label for="personal-details"><h2 class="detail-heading">Personal Details</h2></label>
+                    <input type="text" class="personal-details" style="width: 45%;" id="fname" placeholder="First name" required>
+                    <input type="text" class="personal-details"  style="width: 45%;" placeholder="Last Name" name="" id="lname" required>
+                </div>
+                <div class="form-section">
+                    <label for="address-details"><h2 class="detail-heading" >Address Details</h2></label>
+                    <input type="text" id="addressdetails" placeholder="Address" required>
+                </div>
+                <div class="form-section">
+                    <label for="contact-details"><h2 class="detail-heading">Email Address</h2></label>
+                    <input type="email" id="contactdetails" placeholder="Email" required>
+                    <label for="address-details"><h2 class="detail-heading" >Phone number</h2></label>
+                    <input type="number" placeholder="Phone Number" required id="number" style="margin-left: 5px; padding:20px; font-size: large;">
+                </div>
+                <div class="form-section">
+                    <label for="payment-options"><h2 class="detail-heading">Payment Options</h2></label>
+                    <select id="paymentoptions">
+                        <option value="credit-card"></option>
+                        <option value="COD">Cash On Delivery</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">ORDER</button>
+            </form>
+        </fieldset>
+        </div>
+   
+    </div>
+    
+    <div class="footer">
+        <div class="col1" ><h3 style="font-weight: bold;"><b>VISION</b></h3>
+                            <p>1.Creativity <br><br>
+                                2.Expression <br><br> 
+                                3.Exploration </p></div>
+        <div class="col2"> <h3 style="font-weight: bold;">IMPORTANT LINKS</h3>
+         <a href="index.html" >Home Page</a> 
+         <br><br>
+       
+        <a href="Login.html">Sign-out</a><br><br>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=dwRftPkTkHrsNbCxFTRQJbkqSMxNmSqbCNDkVpsblshGVqRJSrxHCJpMczGgtPXlfSmzgNfLnzvgNtddHxXgVtXthLQKBBMMgmXDZlWWsnXZnXFxKmclCXkhcpXKjFkNGWpMRQwcwfbqRQTrRZRVGWjLrSsNlFsmDkPdKsllV">Customer-Support</a><br></div>
+        <div class="col3"><h3>PRODUCTS</h3>
+        <a href="Cases.html">Cases</a><br><br>
+        <a href="Skins.html">Skins</a><br><br>
+        <a href="AirpodsCover.html">Airpods cases</a><br><br>
+        </div>
+        <div class="col4">
+            <h3>FOLLOW US</h3>
+            <a href="#"><i class='bx bxl-instagram'></i>Instagram</a><br><br>
+            <a href="#"><i class='bx bxl-twitter' ></i>Twitter</a><br><br>
+            <a href="#"><i class='bx bxl-meta' ></i>Meta</a>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <span class="popup-content" id="popup-message"></span>
+        <button id="continue-shopping-button" onclick="continueShopping()">Continue Shopping</button>
+    </div>
+    
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <script>
+    function continueShopping() {
+        window.location.href = 'cases.html'; // Redirect to cases.html
+    }
+    </script>
+    
+    <script>document.getElementById('contactForm').addEventListener("submit", submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+            const urlParams = new URLSearchParams(window.location.search);
+            const itemname = urlParams.get('product');
+            const addressdetails = getElementVal("addressdetails");
+            const model = urlParams.get('model');
+        
+            // Display the order confirmation in the popup
+            const popup = document.getElementById('popup');
+            const popupMessage = document.getElementById('popup-message');
+            popupMessage.innerHTML = `Your order for ${itemname} (${model}) has been created and will be delivered to:<br>${addressdetails}`;
+            popup.style.display = 'block';
+        
+            // Delay hiding the popup (adjust this time as needed)
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 500000); // Hide the popup after 10 seconds
+        }
+        </script>
+        <script>function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/grip flex/mail.js"></script>
+</body>
+</html>

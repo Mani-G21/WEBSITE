@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Form</title>
+   
+</head>
+<body>
+    <div class="container">
+        <img src="/grip flex/images/newlogo.png" alt="" style="zoom: 50%; float: right; display: block;">
+       
+        
+        <form>
+            <div class="form-group">
+                
+                <input type="text" id="login-fname" name="login-fname" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+               
+                <input type="password" id="login-password" name="login-password" placeholder="Enter Password">
+            </div><br><br>
+            <button class="btn" type="button" id="login-button">LOGIN</button>
+           <p>Don't have an account? create one!</p>
+           <button class="btn" type="submit"><a href="SignUp.html" style="text-decoration: none;">SIGN UP</a></button>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+    apiKey: "AIzaSyBKm3pjZFIZiKJXZ_zprFy-uTGeows5E_M",
+    authDomain: "gripflex-a7915.firebaseapp.com",
+    databaseURL: "https://gripflex-a7915-default-rtdb.firebaseio.com",
+    projectId: "gripflex-a7915",
+    storageBucket: "gripflex-a7915.appspot.com",
+    messagingSenderId: "887078322627",
+    appId: "1:887078322627:web:5e4976f21a1b9f9b0cbd76"
+  };
+  firebase.initializeApp(firebaseConfig);
+  document.getElementById('login-button').addEventListener('click', function () {
+        var loginUsername = document.getElementById('login-fname').value;
+        var loginPassword = document.getElementById('login-password').value;
+
+        // Assuming you have a database reference to 'users' in Firebase
+        var usersRef = firebase.database().ref('users');
+
+        usersRef.once('value').then(function (snapshot) {
+            var userFound = false;
+
+            snapshot.forEach(function (childSnapshot) {
+                var user = childSnapshot.val();
+                if (user.fname === loginUsername) {
+                    userFound = true;
+                    // Check the password or other authentication logic here
+                    if (user.password === loginPassword) {
+                        // User found and password is correct
+                        // Redirect to the index.html page
+                        window.location.href = 'index.html';
+                    } else {
+                        // Password is incorrect
+                        alert('Incorrect password or Username');
+                    }
+                }
+            });
+
+            if (!userFound) {
+                // User not found
+                alert('User not found. Please sign up.');
+            }
+        });
+    });
+  
+    </script>
+</body>
+</html>

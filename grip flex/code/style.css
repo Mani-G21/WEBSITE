@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* font famiy there is 3 fonts because if first doesnt works the other will be applied this
+    is called as font stack */
+}
+
+.background{
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    
+    
+}
+
+.header{
+    border: 2px solid black;
+    text-align: right;
+    color: orange;
+    background-color: black;
+    height: 2vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+   text-shadow: 1px 1px 1px black;
+    
+
+    #sp2{
+        margin-left: 7%;
+    }
+    #sp1{
+        
+        margin-left: 7%;
+    }
+    #sp3{
+        margin-left: 7%;
+    }
+}
+
+.quote{
+    margin-top: 2px;
+    border: 2px solid orange;
+    background-color: rgba(128, 128, 128, 0.441);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Cormorant', serif;
+    text-decoration: solid;
+    font-style: italic;
+    
+}
+
+.headshop{
+    padding-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    zoom: 125%;
+    color: rgb(255, 106, 0);
+    text-decoration: solid;
+    text-shadow: 3px 2px 2px black;
+    padding-bottom: 50px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    box-shadow: 10px 10px 10px;
+    
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    
+}
+
+.button{
+    background-color: black;
+    border-radius: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: px 2px 2px ;
+    
+}
+
+a{
+    color: orange;
+    text-decoration: none;
+}
+
+.space{
+    padding-bottom: 190px;
+}
+
+.Themed{
+    color: orange;
+    border: 2px solid black;
+    text-align: center;
+    
+    background-color: black;
+    
+    
+}
+
+
+
+.responsive {
+    
+    float: right;
+    padding-right: 3px;
+    
+    
+    
+  }
+ 
+  .bmwbgp{
+   background-color: black;
+   background-repeat: no-repeat;
+   padding-bottom: 366px;
+   background-size: cover;
+   
+   
+  }
+
+  .img1{
+    box-shadow: 13px 10px 20px black;
+    border-radius: 15%;
+  }
+
+  .av1bgp{
+    
+    background-repeat: no-repeat;
+    padding-bottom: 366px;
+    background-size: cover;
+    box-shadow: 100px 80px 80px;
+    background-color: black;
+   }
+
+   .text{
+    zoom: 300%;
+    color: orange;
+    text-decoration: solid;
+    text-decoration: underline;
+    
+    text-shadow: 2px 2px 2px black;
+   }
+
+   .lx1bgp{
+    
+    background-repeat: no-repeat;
+    padding-bottom: 366px;
+    background-size: cover;
+    box-shadow: 100px 80px 80px;
+    background-color: black;
+   }
+
+   .ending{
+    background-color: black;
+    padding-top: 9px;
+    padding-bottom: 9px;
+   }
+
+   
+
+    #maintheme{
+        color: orange;
+        border: 2px solid black;
+        text-align: center;
+        
+        background-color: black;
+
+    }
+
+    #Lxry{
+         color: orange;
+        border: 2px solid black;
+        text-align: center;
+        background-image: url(luxury.jpg);
+    }
+
+    #avg1{
+        color: orange;
+       border: 2px solid black;
+       text-align: center;
+       background-image: url(avr2blur.jpg);
+   }
+   #bmwhpr{
+    color: black;
+   border: 2px solid black;
+   text-align: center;
+   background-image: url(bmwbgblur.jpg);
+   background-position-x: -400px;
+   background-position-y: -40px;
+   
+}
+#ftr{
+    zoom: 70%;
+}
+        .footer
+        {
+            border-top: darkgrey 1px solid;
+            background: #333;
+            display: flex;
+            color:blanchedalmond;
+            border:#333;
+            box-sizing: border-box;
+        }
+        .col1
+        {
+            margin: 25px;
+            font-size: x-large;   
+        }
+        .col2
+        {
+            font-size: x-large;
+            margin: 25px;   margin-left: 300px;
+        }
+        .col3
+        {
+            font-size: x-large;
+            margin: 25px;
+            margin-left: 300px;
+        }
+        .col4
+        {
+            font-size: x-large;
+            margin: 25px;
+            margin-left: 300px;
+        }
+        a
+        {
+            color: blanchedalmond;
+        }

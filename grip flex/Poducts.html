@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRIP FLEX</title>
+    <link rel="stylesheet" href="gripflex.css">
+    <script>
+        function searchProducts() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".col-3");
+
+    const searchResults = document.querySelector(".search-results");
+    searchResults.innerHTML = "";
+
+    products.forEach((product) => {
+        const productName = product.querySelector("h4").innerText.toLowerCase();
+        if (productName.includes(searchInput)) {
+            searchResults.appendChild(product.cloneNode(true));
+        }
+    });
+
+    if (searchResults.children.length === 0) {
+        searchResults.innerHTML = "<p>No products found.</p>";
+    }
+}
+
+    </script>
+    
+</head>
+<body>
+    <div class="header" style="background-color: black;">
+        <a href="/grip flex/code/index.html"><span class="htext" id="sp1"><--BACK</span></a>
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button onclick="searchProducts()">Search</button>
+      
+
+        
+    </div>
+    <div class="quote"><h3>"For enthusiasts by enthusiasts!"--GRIP FLEX</h3></div>
+    
+    <div class="search-results small-container"></div>
+
+    <div class="categories" style="margin-top: 10%;">
+
+        <div class="small-container">
+
+            
+        <div class="row">
+            <div class="col-3">
+                
+                <a href="details.html?product=Iron man&price=799&image=/grip flex/images/avc1.jpeg">
+                    <img src="/grip flex/images/avc1.jpeg" alt="Iron Man">
+                </a>
+                <h4>Iron man</h4>
+                <p class="price">799/-</p> 
+              
+            </div>
+            
+                <div class="col-3">
+                    <a href="details.html?product=Iron Man Mask&price=499&image=/grip flex/images/avc2.jpeg">
+                        <img src="images/avc2.jpeg" alt="">
+                    </a>
+                    
+                    <h4>Iron Man Mask</h4>
+                    <p class="price">499/-</p> 
+                  
+                </div>       
+                <div class="col-3">
+                        <a href="details.html?product=Black Panther&price=499&image=/grip flex/images/avc3.jpeg">
+                            <img src="images/avc3.jpeg" alt="">
+                        </a>
+                        <h4>Black Panther</h4>
+                        <p class="price">499/-</p>    
+                       
+                    </div>
+                
+            </div>
+        </div>
+        </div>
+
+    
+        <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <a href="details.html?product=Thor Case&price=799&image=/grip flex/images/m4.jpeg">
+                    <img src="images/m4.jpeg" alt="">
+                </a>
+                
+                <h4>Thor Case</h4>
+                <p class="price">799/-</p> 
+            
+            </div>
+            
+                <div class="col-3">
+                    <a href="details.html?product=Spiderman Case&price=499&image=/grip flex/images/m5.jpeg">
+                        <img src="images/m5.jpeg" alt="">
+                    </a>
+                    
+                    <h4>Spiderman Case</h4>
+                    <p class="price">499/-</p> 
+                  
+                </div>       
+                <div class="col-3">
+                    <a href="details.html?product=Bucky&price=499&image=/grip flex/images/m1.jpeg">
+                        <img src="images/m1.jpeg" alt="">
+                    </a>
+                        
+                        <h4>Bucky</h4>
+                        <p class="price">499/-</p>    
+                     
+                    </div>
+                
+            </div>
+        </div>
+        </div>
+
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <a href="details.html?product=Black widow Case&price=499&image=/grip flex/images/m7.jpeg">
+                        <img src="images/m7.jpeg" alt="">
+                    </a>
+                    
+                    <h4>Black widow Case</h4>
+                    <p class="price">499/-</p> 
+                   
+                </div>
+                
+                    <div class="col-3">
+                        <a href="details.html?product=BMW-1&price=999&image=/grip flex/images/bmwc2.jpeg">
+                            <img src="images/bmwc2.jpeg" alt="">
+                        </a>
+                        <h4>BMW-1</h4>
+                        <p class="price">999/-</p> 
+                     
+                    </div>       
+                    <div class="col-3">
+                        <a href="details.html?product=BMW Classics Case&price=999&image=/grip flex/images/bmwc3.jpeg">
+                            <img src="images/bmwc3.jpeg" alt="">
+                        </a>
+                        
+                            <h4>BMW Classics Case</h4>
+                            <p class="price">999/-</p>    
+                        
+                        </div>
+                    
+                </div>
+            </div>
+            </div>
+
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="details.html?product=BMW-2&price=999&image=/grip flex/images/bmwc4.jpeg">
+                            <img src="images/bmwc4.jpg" alt="">
+                        </a>
+                        
+                        <h4>BMW-2</h4>
+                        <p class="price">999/-</p> 
+                    
+                    </div>
+                    
+                        <div class="col-3">
+                            <a href="details.html?product=BMW Limited Edition&price=1499&image=/grip flex/images/b4.jpeg">
+                                <img src="images/b4.jpeg" alt="">
+                            </a>
+                            
+                            <h4>BMW Limited Edition</h4>
+                            <p class="price">1499/-</p> 
+                      
+                        </div>       
+                        <div class="col-3">
+                            <a href="details.html?product=BMW white&price=999&image=/grip flex/images/b5.jpeg">
+                                <img src="images/b5.jpeg" alt="">
+                            </a>
+                            
+                                <h4>BMW white</h4>
+                                <p class="price">999/-</p>    
+                           
+                            </div>
+                        
+                    </div>
+                </div>
+                </div>
+
+                <div class="small-container">
+                    <div class="row">
+                    
+                        
+                            <div class="col-3">
+                                <a href="details.html?product=Luxury London view&price=1999&image=/grip flex/images/luxc1.jpeg">
+                                    <img src="images/luxc1.jpeg" alt="">
+                                </a>
+                                <h4>Luxury London view</h4>
+                                <p class="price">1999/-</p> 
+                             
+                            </div>       
+                            <div class="col-3">
+                               <a href="details.html?product=Luxury-2&price=1999&image=/grip flex/images/luxc2.jpeg"> <img src="images/luxc2.jpeg" alt=""></a>
+                                    <h4>Luxury-2</h4>
+                                    <p class="price">1999/-</p>    
+                              
+                                </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="small-container">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="details.html?product=Luxury-3&price=3499&image=/grip flex/images/luxc3.jpeg"><img src="images/luxc3.jpeg" alt=""></a>
+                                <h4>Luxury-3</h4>
+                                <p class="price">3499/-</p> 
+                          
+                            </div>
+                            
+                                <div class="col-3">
+                                    <a href="details.html?product=CHRISTIAN DIOR&price=7999&image=/grip flex/images/L (5).jpeg"><img src="images/L (5).jpeg" alt=""></a>
+                                    <h4>CHRISTIAN DIOR</h4>
+                                    <p class="price">7999/-</p> 
+                              
+                                </div>       
+                                <div class="col-3">
+                                    <a href="details.html?product=Basic brown&price=499&image=/grip flex/images/P (1).jpeg"><img src="images/P (1).jpeg" alt=""></a>
+                                        <h4>Basic brown</h4>
+                                        <p class="price">499/-</p>    
+                                     
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="small-container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="details.html?product=Classy Blue&price=499&image=/grip flex/images/P (2).jpeg"><img src="images/P (2).jpeg" alt=""></a>
+                                    <h4>Classy Blue</h4>
+                                    <p class="price">499/-</p> 
+                                 
+                                </div>
+                                
+                                    <div class="col-3">
+                                        <a href="details.html?product=All black&price=599&image=/grip flex/images/P (3).jpeg"><img src="images/P (3).jpeg" alt=""></a>
+                                        <h4>All black</h4>
+                                        <p class="price">599/-</p> 
+                                      
+                                    </div>       
+                                    <div class="col-3">
+                                        <a href="details.html?product=Purple supremacy&price=499&image=/grip flex/images/P (4).jpeg"><img src="images/P (4).jpeg" alt=""></a>
+                                            <h4>Purple supremacy</h4>
+                                            <p class="price">499/-</p>    
+                                        
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="small-container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="details.html?product=Light brown&price=499&image=/grip flex/images/P (5).jpeg"><img src="images/P (5).jpeg" alt=""></a>
+                                        <h4>Light brown</h4>
+                                        <p class="price">499/-</p> 
+                                    
+                                    </div>
+                                    
+                                        <div class="col-3">
+                                            <a href="details.html?product=GOD Quote Case&price=499&image=/grip flex/images/s (1).jpeg"><img src="images/s (1).jpeg" alt=""></a>
+                                            <h4>GOD Quote Case</h4>
+                                            <p class="price">499/-</p> 
+                                        
+                                        </div>       
+                                        <div class="col-3">
+                                            <a href="details.html?product=Little things case&price=499&image=/grip flex/images/s (2).jpeg"><img src="images/s (2).jpeg" alt=""></a>
+                                                <h4>Little things case</h4>
+                                                <p class="price">499/-</p>    
+                                              
+                                            </div>
+                                        
+                                    </div>
+                                </div>
+                                </div>
+
+
+                                <div class="small-container">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <a href="details.html?product=Matte Black &price=499&image=/grip flex/images/s (3).jpeg"><img src="images/P (3).jpeg " alt=""></a>
+                                            <h4>Matte Black </h4>
+                                            <p class="price">499/-</p> 
+                                          
+                                 </div>
+                                        
+                                            <div class="col-3">
+                                                <a href="details.html?product=Jesus Case&price=499&image=/grip flex/images/s (4).jpeg"><img src="images/s (4).jpeg" alt=""></a>
+                                                <h4>Jesus Case</h4>
+                                                <p class="price">499/-</p> 
+                                             
+                                            </div>       
+                                            <div class="col-3">
+                                                <a href="details.html?product=Energy quote case&price=499&image=/grip flex/images/s (5).jpeg"><img src="images/s (5).jpeg" alt=""></a>
+                                                    <h4>Energy quote case</h4>
+                                                    <p class="price">499/-</p>    
+                                                
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                    </div>
+            
+        
+        
+    </div>
+</body>
+</html> 

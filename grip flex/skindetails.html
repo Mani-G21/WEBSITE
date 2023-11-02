@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const deviceSelect = document.getElementById('deviceoptions');
+            const submitButton = document.getElementById('btn');
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageUrl = urlParams.get('image');
+            const price = urlParams.get('price');
+            const itemname = urlParams.get('product');
+            let selectedModel = '';  // Initialize selectedModel variable
+
+            document.getElementById('item').innerHTML = `${itemname}`;
+            document.getElementById('productPrice').innerHTML = `Price: ${price}/-`;
+
+            if (imageUrl) {
+                const productImage = document.getElementById('imga');
+                productImage.src = imageUrl;
+            }
+
+            deviceSelect.addEventListener('change', (event) => {
+                selectedModel = event.target.value; // Update selectedModel when the user changes the option
+            });
+
+            submitButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Construct the URL for the checkout page with all parameters
+                const checkoutURL = `buynow.html?image=${imageUrl}&price=${price}&product=${itemname}&model=${selectedModel}`;
+                window.location.href = checkoutURL;
+            });
+        });
+    </script>
+    <div class="product-details">
+           
+        <img id="imga" alt="Selected Product Image">
+        <div class="pdetailsinner">
+        <p id="item">
+        </p>
+        
+    </div>
+    </div>
+
+
+    <div class="selection">
+         
+            <form action="buynow.html" method="get">
+               
+                <h1 class="heading">FIND YOUR SMARTPHONE <br> DEVICE HERE</h1> 
+               
+                <pre><b id="productPrice" class="money"></b></pre>
+                
+               <fieldset class="box">
+                <div class="form-section">
+                    <label for="payment-options"><h2 class="device-name">Device Name</h2></label>
+                    <select id="deviceoptions">
+                        <option class="option">NONE</option>
+                        <option class="option"value="Iphone 15 pro max">Iphone 15 PRO MAX</option>
+                        <option class="option"value="IPHONE 15 PRO">IPHONE 15 PRO</option>
+                        <option class="option"value="Iphone 15 Plus">IPHONE 15+</option>
+                        <option class="option"value="IPHONE 15">IPHONE 15</option>
+                        <option class="option"value="IPHONE 14 PRO MAX">IPHONE 14 PRO MAX</option>
+                        <option class="option"value="IPHONE 14 PRO">IPHONE 14 PRO</option>
+                        <option class="option"value="IPHONE 14 plus">IPHONE 14+</option>
+                        <option class="option"value="IPHONE 14">IPHONE 14</option>
+                        <option class="option"value="IPHONE 13 PRO MAX">IPHONE 13 PRO MAX</option>
+                        <option class="option"value="Iphone 13 pro">IPHONE 13 PRO</option>
+                        <option class="option"value="Iphone 13">IPHONE 13</option>
+                        <option class="option"value="Iphone 13 mini">IPHONE 13 MINI</option>
+                        <option class="option"value="Iphone 12 pro max">IPHONE 12 PRO MAX</option>
+                        <option class="option"value="Iphone 12 pro">IPHONE 12 PRO</option>
+                        <option class="option"value="Iphone 12">IPHONE 12</option>
+                        <option class="option"value="Iphone 12 mini">IPHONE 12 MINI</option>
+                        <option class="option"value="Iphone 11 pro max">IPHONE 11 PRO MAX</option>
+                        <option class="option"value="Iphone 11 pro">IPHONE 11 PRO</option>
+                        <option class="option"value="Iphone 11">IPHONE 11</option>
+
+                    </select>
+                </div>
+                <br>
+                <br>
+            
+                <div class="container">  
+                    <input type="hidden" name="image" value="">
+                    <input type="hidden" name="price" value="">
+                    <input type="hidden" name="product" value="">
+                  
+                    <button id ="btn" type="submit">submit</button>  
+                    </div>  
+               </fieldset>
+              
+
+               
+
+          
+               
+
+                <br>
+                <p class="text">Note : <br>
+                    Images only for representation. Actual case will be according to the selected device. <br></p>
+                <br><br>
+                <ul class="text">
+                    <li>Unique sand texture design for optimal grip</li>
+                    <li>Air cushion technology for all corner protection Raised screen edges </li>
+                    <li>Camera Guard lens frame provide enhanced scratch protection</li>
+                    <li>Exact fit, perfect cutouts with minimum bulk</li>
+                    <li>All buttons are easy to reach and easy to use</li>
+                </ul>
+                
+            </form>
+
+    </div>
+    <div>
+        <img style="width: 100%;" src="/grip flex/images/sskin1.jpeg" alt="">
+        <img style="width: 100%;"src="/grip flex/images/sskin2.png" alt="">
+        <img style="width: 100%;"src="/grip flex/images/sskin3.png" alt="">
+        <img style="width: 100%;"src="/grip flex/images/sskin4.png" alt="">
+        <br><br>
+        <img class="skin"  style="padding-left: 2px; width: 25%;"src="/grip flex/images/Screenshot 2023-10-29 214516.png" alt="">
+        <img class="skin" style="width: 24%; height: 316px;"src="/grip flex/images/Screenshot 2023-10-29 214528.png" alt="">
+        <img class="skin" style="width: 24%; height: 316px;"src="/grip flex/images/Screenshot 2023-10-29 214541.png" alt="">
+        <img class="skin" style="width: 25%; height: 316px;"src="/grip flex/images/Screenshot 2023-10-29 214555.png" alt="">
+        
+    </div>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/grip flex/mail.js"></script>
+
+
+</body>
+</html> 

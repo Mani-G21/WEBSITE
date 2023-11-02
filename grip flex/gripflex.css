@@ -1,0 +1,349 @@
+
+
+*{
+    margin-top: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+   
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: black;
+}
+.col-3{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-3 img{
+    width:100%;
+}
+    heading{
+    color: white;
+}
+
+.header{
+    border: 2px solid black;
+    text-align: right;
+    color: orange;
+    background-color: black;
+    height: 2vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+   text-shadow: 1px 1px 1px black;
+   text-align: left;
+    
+  .htext{
+    margin-left: 2%;
+  }
+
+   
+}
+a{
+    color: orange;
+    text-decoration: none;
+}
+.quote{
+   
+    border: 2px solid orange;
+    background-color: rgba(128, 128, 128, 0.441);
+    text-align: center;
+    color: orange;
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Cormorant', serif;
+    text-decoration: solid;
+    font-style: italic;
+    padding-top: 2%;
+    
+}
+.note{
+    color: rgb(255, 122, 122);
+    font-size: smaller;
+}
+.price {
+    font-size: larger;
+}
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.col-3:hover{
+    transform: translateY(-15px);
+}
+
+
+input{
+    
+    float: right;
+    background-color: beige;
+    color: orange;
+    border-radius: 15%;
+
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    color: orange;
+    
+      border-radius: 15%;
+    float: right;
+}
+
+
+
+/* Additional CSS for the button if needed */
+
+.search-results {
+    display: flex;
+    flex-wrap: wrap; /* Allows the results to wrap to the next row if necessary */
+}
+
+.col-3 {
+    flex: 1; /* Makes each result take up an equal amount of space in the row */
+    margin: 10px; /* Adds spacing between results */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: black;
+    padding: 10px;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.htext {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-container {
+    padding: 10px;
+}
+
+.searchInput {
+    padding: 5px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #444;
+}
+
+.quote {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+}
+
+nav {
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.small-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.col-3 {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#navbar {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.logo {
+    max-height: 80px;
+    margin-left: 20px;
+}
+
+.links {
+    margin-left: 55px;
+}
+
+.navbar {
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+
+}
+
+.heading {
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+    text-shadow: 5px 5px 15px #868686;
+}
+
+button {
+    padding: 10px;
+    text-align: center;
+    margin: 30px;
+    display: block;
+}
+
+#head {
+    text-align: center;
+}
+
+/* Style for the navigation bar */
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* Style for the logo */
+.navbar .logo {
+    float: left;
+    padding: 25px;
+}
+
+/* Style for the navigation links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 146px;
+    text-decoration: none;
+}
+
+/* Style for the search text */
+.navbar .search-text {
+    float: right;
+}
+
+/* Change the color of the links on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.9s;
+    border-radius: 20px;
+}
+
+/* Style for the button bar */
+.button-bar {
+    background-color: #ffffff;
+    text-align: center;
+    text-shadow: 5px 5px 15px #797979;
+}
+
+/* Style for the heading */
+.button-bar h2 {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+}
+
+/* Style for the buttons */
+.button-bar .button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Hover effect for buttons */
+.button-bar .button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition-duration: 0.4s;
+    border-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.24);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
