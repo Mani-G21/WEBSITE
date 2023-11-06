@@ -1,1 +1,116 @@
 <!-- idar bana airpods ka -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const deviceSelect = document.getElementById('deviceoptions');
+            const submitButton = document.getElementById('btn');
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageUrl = urlParams.get('image');
+            const price = urlParams.get('price');
+            const itemname = urlParams.get('product');
+            let selectedModel = '';  // Initialize selectedModel variable
+
+            document.getElementById('item').innerHTML = `${itemname}`;
+            document.getElementById('productPrice').innerHTML = `Price: ${price}/-`;
+
+            if (imageUrl) {
+                const productImage = document.getElementById('imga');
+                productImage.src = imageUrl;
+            }
+
+            deviceSelect.addEventListener('change', (event) => {
+                selectedModel = event.target.value; // Update selectedModel when the user changes the option
+            });
+
+            submitButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                // Construct the URL for the checkout page with all parameters
+                const checkoutURL = `buynow.html?image=${imageUrl}&price=${price}&product=${itemname}&model=${selectedModel}`;
+                window.location.href = checkoutURL;
+            });
+        });
+    </script>
+    <div class="product-details">
+           
+        <img id="imga" alt="Selected Product Image">
+        <div class="pdetailsinner">
+        <p id="item">
+        </p>
+        
+    </div>
+    </div>
+
+
+    <div class="selection">
+         
+            <form action="buynow.html" method="get">
+               
+                <h1 class="heading">FIND YOUR DEVICE HERE</h1> 
+               
+                <pre><b id="productPrice" class="money"></b></pre>
+                
+               <fieldset class="box">
+                <div class="form-section">
+                    <label for="payment-options"><h2 class="device-name">Device Name</h2></label>
+                    <select id="deviceoptions">
+                        <option class="option"value="AIRPODS PRO 2nd GEN">AIRPODS PRO 2nd GEN</option>
+                        <option class="option"value="AIRPODS PRO 1st GEN">AIRPODS PRO 1st GEN</option>
+                        <option class="option"value="AIRPODS 3rd GEN">AIRPODS 3rd GEN</option>
+                        <option class="option"value="AIRPODS 2nd GEN">AIRPODS 2nd GEN</option>
+                        <option class="option"value="AIRPODS 1st GEN">AIRPODS 1st GEN</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+            
+                <div class="container">  
+                    <input type="hidden" name="image" value="">
+                    <input type="hidden" name="price" value="">
+                    <input type="hidden" name="product" value="">
+                  
+                    <button id ="btn" type="submit">submit</button>  
+                    </div>  
+               </fieldset>
+              
+
+               
+
+          
+               
+
+                <br>
+                <p class="text">Note : <br>
+                    Images only for representation. Actual case will be according to the selected device. <br></p>
+                <br><br>
+                <ul class="text">
+                    <li>Unique sand texture design for optimal grip</li>
+                    <li>Air cushion technology for all corner protection </li>
+                    <li>Exact fit, perfect cutouts with minimum bulk</li>
+                    <li>Easy opening and closing</li>
+                    <li>magsafe compatible*</li>
+                </ul>
+                
+            </form>
+
+    </div>
+    <div>
+        <img style="width: 100%;" src="/grip flex/images/airdetails.jpg" alt="">
+        <img style="width: 100%;" src="/grip flex/images/airdetails1.jpg"alt="">
+        <img style="width: 100%; "src="/grip flex/images/airdetails2.jpg" alt="">
+        <img style="width: 100%; "src="/grip flex/images/airdetails3.jpg" alt=""> 
+        <img style="width: 100%; "src="/grip flex/images/airdetails4.jpg" alt="">   
+    </div>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/grip flex/mail.js"></script>
+
+
+</body>
+</html> 
